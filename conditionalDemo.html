@@ -30,9 +30,9 @@
 </style>
 <body>
 
-<h1> Baby Name Generator</h1>
+	<h1> Baby Name Generator</h1>
 
-<input id="myInput" type="text">
+	<input id="myInput" type="text">
 
 	<button onclick="myFunction()">Try it</button>
 
@@ -42,29 +42,28 @@
 	<script>
 		//My testing variables
 		function myFunction(){
-		var letter = document.getElementById("myInput").value;
-		var text;
+			var letter = document.getElementById("myInput").value;
+			var text;
 
-		if (letter === "c") {
-			text = "Charlie";
+			//"if" should be used first 
+			if (letter === "c") {
+				text = "Charlie";
+			//and if true/false, it will run next code else if...
+			} else if (letter === "a") {
+				text = "Abraham";
 
-		} else if (letter === "a") {
-			text = "Abraham";
+			} else if (letter === "x" || letter === "z") {
+				text = "Sorry there are no names available";
 
-		} else if (letter === "x" || letter === "z") {
-			text = "Sorry there are no names available";
-
-		} else if (letter === "g" || letter=== "h") {
-			text = "you are having a boy";
+			} else if (letter === "g" || letter=== "h") {
+				text = "you are having a boy";
+			//else can be used for others that are not stated abov
+			} else {
+				text = "try again!";
+			} //close bracket
 		
-		} else {
-			text = "try again!";
-		}
-
-
-		
-		document.getElementById("demo").innerHTML = text;
-		}
+		document.getElementById("demo").innerHTML = text;//this is call it and spit the answer out in html
+		}//closing bracket on the function call
 
 		//my array of items for testing
 		// var myArray = [5, 10, 15, 20, 25, 30, false, true];
